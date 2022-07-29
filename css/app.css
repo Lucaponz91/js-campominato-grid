@@ -1,5 +1,23 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
 main{
     background-color: rgb(127, 255, 212);
 }
+button{
+    width: 50%;
+    margin-left: 180px;
+}
 
-.div
+.grid_container{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    max-width: 850px;
+}
+.grid_container div{
+    aspect-ratio: 1;
+    border: 1px black solid;
+
+}

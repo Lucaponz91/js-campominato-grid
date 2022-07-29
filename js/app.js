@@ -1,7 +1,7 @@
 // INSERISCO IL BOTTONE CON EVENTLISTENER PER GENERARE LA GRIGLIA 
 const buttonElement = document.getElementById('genera_griglia_easy');
 // const gridEl = document.getElementById('grid_container')
-const gridEl = document.querySelector('grid_container')
+const gridEl = document.querySelector('.grid_container')
 
 console.log(gridEl)
 console.log(buttonElement)
