@@ -12,7 +12,7 @@ buttonElement.addEventListener('click', function(){
     div.innerHTML = i + 1
     console.log(div)
     // inserisco il div creato nel div "grid"
-    // gridEl.append(div)
+    gridEl.append(div)
     }
 }
 )
