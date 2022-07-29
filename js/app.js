@@ -15,6 +15,7 @@ buttonElement.addEventListener('click', function(){
     console.log(div)
     // inserisco il div creato nel div "grid"
     gridEl.append(div)
-    }
+    buttonElement.removeEventListener('click', function() {})
+    }   
 }
 )
