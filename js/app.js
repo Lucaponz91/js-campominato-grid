@@ -34,6 +34,7 @@ function creaCelleDiv () {
     // aggiungo la classe cella alle
     div.classList.add('cella')
     console.log(div)
+    div.addEventListener('click', clickDiv)
     return div
     
 
