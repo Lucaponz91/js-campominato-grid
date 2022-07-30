@@ -10,6 +10,14 @@ buttonElement.addEventListener('click', function(){
     let diff = document.getElementById('diff').value
     // const easy = diff.value
     console.log(diff)
+    // aggiungo la classe per lo stile css della griglia a seconda della difficoltà selezionata
+    if (diff == 9){
+        gridEl.classList.add('normal')
+    } else if (diff == 7 ){
+        gridEl.classList.add('hard')
+    }
+    
+    console.log(diff)
     let dimensioneGriglia = diff **2
     console.log(dimensioneGriglia)
     // RESET

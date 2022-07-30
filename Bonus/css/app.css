@@ -16,6 +16,16 @@ button{
     grid-template-columns: repeat(10, 1fr);
     max-width: 850px;
 }
+.grid_container.normal{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    max-width: 850px;
+}
+.grid_container.hard{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    max-width: 850px;
+}
 .grid_container div{
     aspect-ratio: 1;
     border: 1px black solid;
