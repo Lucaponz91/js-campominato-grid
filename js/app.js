@@ -1,5 +1,5 @@
 // INSERISCO IL BOTTONE CON EVENTLISTENER PER GENERARE LA GRIGLIA 
-const buttonElement = document.getElementById('genera_griglia_easy');
+const buttonElement = document.getElementById('genera_griglia');
 // const gridEl = document.getElementById('grid_container')
 const gridEl = document.querySelector('.grid_container')
 
@@ -7,17 +7,14 @@ console.log(gridEl)
 console.log(buttonElement)
 // IL BOTTONE AVVIERA' UN CICLO CHE GENERERA' 100 DIV
 buttonElement.addEventListener('click', function(){
-    for (let i = 0; i < 100; i++) {
-    // // creo il div
-    // const div = document.createElement('div')
-    // // creo il contenuto del div (il numero della casella)
-    // div.innerHTML = i + 1
-    // // aggiungo la classe cella alle
-    // div.classList.add('cella')
-    // console.log(div)
-    // // inserisco il div creato nel div "grid"
-
-
+    let diff = document.getElementById('diff').value
+    // const easy = diff.value
+    console.log(diff)
+    let dimensioneGriglia = diff **2
+    console.log(dimensioneGriglia)
+    // RESET
+    gridEl.innerHTML = ''
+    for (let i = 0; i < dimensioneGriglia; i++) {
     // gridEl.append(div)
     const cella = creaCelleDiv()
     // creo il contenuto del div (il numero della casella)
@@ -30,12 +27,20 @@ buttonElement.addEventListener('click', function(){
 function creaCelleDiv () {
     // creo il div
     const div = document.createElement('div')
-    
-    // aggiungo la classe cella alle
+    // aggiungo la classe cella ai div creati
     div.classList.add('cella')
-    console.log(div)
-    div.addEventListener('click', clickDiv)
+    // Aggiungo l'event listener ad ogni div
+    div.addEventListener('click', clickHandler)
     return div
-    
+}
+// console.log(this)
 
+function clickHandler() {
+    const div = this;
+    div.classList.toggle('clicked');
+    // scrivo in console il numero della cella
+    // console.log(div.innerHTML);
+
+    // rimuovo il listener
+    div.removeEventListener('click', clickHandler);
 }

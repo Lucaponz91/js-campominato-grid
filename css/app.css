@@ -24,3 +24,6 @@ button{
     align-items: center;
 
 }
+.clicked{
+    background-color: lightblue;
+}
