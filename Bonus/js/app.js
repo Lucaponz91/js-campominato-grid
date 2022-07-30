@@ -7,14 +7,14 @@ console.log(gridEl)
 console.log(buttonElement)
 // IL BOTTONE AVVIERA' UN CICLO CHE GENERERA' 100 DIV
 buttonElement.addEventListener('click', function(){
-    // let diff = document.getElementById('diff').value
+    let diff = document.getElementById('diff').value
     // const easy = diff.value
-    // console.log(diff)
-    // let dimensioneGriglia = diff **2
-    // console.log(dimensioneGriglia)
+    console.log(diff)
+    let dimensioneGriglia = diff **2
+    console.log(dimensioneGriglia)
     // RESET
     gridEl.innerHTML = ''
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < dimensioneGriglia; i++) {
     // gridEl.append(div)
     const cella = creaCelleDiv()
     // creo il contenuto del div (il numero della casella)
